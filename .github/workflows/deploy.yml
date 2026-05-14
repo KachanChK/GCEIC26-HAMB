@@ -27,7 +27,7 @@ jobs:
     if: needs.detect-changes.outputs.api == 'true'
     runs-on: ubuntu-latest
     permissions: write-all
-    
+
     steps:
       - name: Deploy_Project_API
         id: Deploy_Project_API
@@ -35,7 +35,7 @@ jobs:
           RESPONSE=$(curl --request GET \
                --url ${{ secrets.DEPLOY_HOOK }} \
                --header 'accept: application/json' \
-               --header 'content-type: application/json' 
+               --header 'content-type: application/json') 
   
           echo "Deploy response: $RESPONSE"
 
