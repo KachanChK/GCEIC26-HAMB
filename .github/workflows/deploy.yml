@@ -27,6 +27,7 @@ jobs:
     if: needs.detect-changes.outputs.api == 'true'
     runs-on: ubuntu-latest
     permissions: write-all
+    
     steps:
       - name: Deploy_Project_API
         id: Deploy_Project_API
