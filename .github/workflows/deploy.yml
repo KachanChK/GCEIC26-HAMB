@@ -21,6 +21,7 @@ jobs:
               - 'api/**'
             app:
               - 'app/**
+              
   unitTestApi:
     needs: detect-changes
     if: needs.detect-changes.outputs.api == 'true'
