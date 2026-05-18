@@ -82,7 +82,7 @@ jobs:
 
           while [ $ATTEMPT -lt $MAX_ATTEMPTS ]; do
             STATUS=$(curl --request GET \
-              --url https://api.render.com/v1/services/${{ secrets.RENDER_SERVICE_ID_1 }}/deploys/${{ steps.Deploy_Project_API.outputs.deploy_id }} \
+              --url https://api.render.com/v1/services/${{ secrets.SERVICE_ID }}/deploys/${{ steps.Deploy_Project_API.outputs.deploy_id }} \
               --header "Authorization: Bearer ${{ secrets.RENDER_API_KEY }}" \
               | jq -r '.status')
 
