@@ -64,9 +64,10 @@ jobs:
                --url ${{ secrets.DEPLOY_HOOK }} \
                --header 'accept: application/json' \
                --header 'content-type: application/json') 
-  
+
           echo "Deploy response: $RESPONSE"
-          DEPLOY_ID=$(echo $RESPONSE | jq -r 'id')
+
+          DEPLOY_ID=$(echo $RESPONSE | jq -r '.deploy.id')
           echo "deploy_id=$DEPLOY_ID" >> $GITHUB_OUTPUT
           echo "Deploy ID: $DEPLOY_ID"
         
