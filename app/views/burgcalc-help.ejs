@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BURGCALC - Help</title>
+  <link rel="stylesheet" href="/burgcalc.css">
+</head>
+<body>
+  <%- include('burgcalc-topbar', { currentPage }) %>
+
+  <main class="burgcalc-page">
+    <section class="burgcalc-panel">
+      <h1>Help</h1>
+
+      <div class="burgcalc-faq">
+        <h2>Como acessar?</h2>
+        <p>Use o login admin e a senha admin.</p>
+
+        <h2>Como calcular?</h2>
+        <p>Entre na tela Calculo, informe os custos e clique em Calcular.</p>
+
+        <h2>Qual endpoint e usado?</h2>
+        <p>A tela principal chama a API pelo endpoint /BURGCALC/resumo.</p>
+
+        <h2>Quais valores sao aceitos?</h2>
+        <p>Custos devem ser maiores ou iguais a zero. A margem deve ser maior que 0 e menor que 100.</p>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

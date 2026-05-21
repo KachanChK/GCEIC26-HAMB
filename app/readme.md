@@ -13,7 +13,6 @@ npm run dev
 
 instala dependencia 
 
-npm install express-session
 npm install body-parser
 npm install ejs
 npm install bcryptjs
